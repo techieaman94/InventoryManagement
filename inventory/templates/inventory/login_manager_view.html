@@ -1,0 +1,36 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Inventory Management System</TITLE>
+
+</HEAD>
+
+<BODY style="background-color:Lavender;">
+<h2><div><a href='{% url 'logout' %}'>Log out</a></div</h2>
+
+
+<H2 style="background-color:DodgerBlue;" > You have logged in || Options for Managers are following</H2>
+
+<HR>
+
+
+<nav>
+	<ul>
+	
+		<li><a href='{% url 'inventory_add_view' %}'>Click here to Add new Inventory Records </a> </li>
+		<li><a href='{% url 'inventory_change_view' %}'>Click here to Change/Delete Inventory Records </a> </li>
+		
+
+		<li><a href='{% url 'inventory_fetch_view' %}'>Click here to Fetch Pending Inventory Items and APPROVE it </a> </li>
+	
+	</ul>
+
+	
+</nav>
+
+<HR>
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,32 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Inventory Management System</TITLE>
+
+</HEAD>
+
+<BODY style="background-color:Lavender;">
+<h2><div><a href='{% url 'logout' %}'>Log out</a></div</h2>
+
+
+<H2 style="background-color:DodgerBlue;" >You have logged in || Assistant needs Approval of Store Manager after Adding or Changing the Records</H2>
+<h3> Note : After making change in Records, The status of records will be PENDING, It will be APPROVED by a Store Manager</h3>
+
+<HR>
+
+
+<nav>
+	<ul>
+	
+		<li>Click here <a href='{% url 'inventory_add_view' %}'>  to Add </a>new Inventory Records  </li>
+		<li>Click here <a href='{% url 'inventory_change_view' %}'>  to Change </a>a Inventory Records  </li>
+		
+	</ul>
+</nav>
+
+<HR>
+
+</BODY>
+
+</HTML>

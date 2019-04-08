@@ -1,0 +1,13 @@
+
+
+<body style="background-color:Lavender;">
+	<h2><div><a href="/admin/logout">Log out</a></div</h2>
+<h2>
+	Enter the details of the Product :
+</h2>
+<h4>Enter the date in YYYY-MM-DD format</h4>
+<form method = 'POST'> {% csrf_token %}
+{{ form.as_p }}
+<input type='submit' value='Save' />
+</form>
+</body>

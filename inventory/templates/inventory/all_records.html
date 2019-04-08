@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fetch records </title>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 2px;
+  text-align: left;    
+}
+</style>
+
+</head>
+
+<BODY style="background-color:Lavender;">
+<h2><div><a href='{% url 'logout' %}'>Log out</a></div</h2>
+
+	
+<h2>All Inventory Records are followings</h2>
+<h3>To Change a inventory record Click on Product id</h3>
+
+<table style="width:100%">
+  <tr>
+    <th>Product ID</th>
+    <th>Product Name</th>
+    <th>Vendor </th>
+    <th>MRP</th>
+    <th>Batch Number</th>
+    <th>Batch Date</th>
+    <th>Quantity in Hand</th>
+    <th>Status</th>
+    <th> To change record</th>
+    <th>To delete record</th>
+  </tr>
+
+  {% for instance in records %}
+  <tr>
+    <td>{{ instance.Product_id }}</a></td>
+    <td>{{ instance.Product_Name }}</td>
+    <td>{{ instance.Vendor}}</td>
+    <td>{{ instance.MRP}}</td>
+    <td>{{ instance.Batch_Number}}</td>
+    <td>{{ instance.Batch_Date}}</td>
+    <td>{{ instance.Quantity_in_Hand}}</td>
+    <td>{{ instance.Status }}</td>
+    <td><a href='{% url 'inventory_change_record_view'  instance.id  %}'>Change Record</a></td>
+    <td><a href='{% url 'inventory_delete_record_view'  instance.id  %}'>Delete Record</a></td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+</body>
+</html>
+

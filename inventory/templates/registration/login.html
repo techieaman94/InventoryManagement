@@ -1,0 +1,36 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Inventory Management login</TITLE>
+
+</HEAD>
+
+<BODY style="background-color:Lavender;">
+	
+
+<H1 style="background-color:DodgerBlue;" > Welcome to our site  </H1>
+<h2 style="background-color:DodgerBlue;" >You are on login page</h2>
+
+<HR>
+
+<H2 style="background-color:MediumSeaGreen;">Enter following details to login </H2>
+
+
+
+<form action="{% url 'login'  %}" id='b1' method = 'post'> 
+{% csrf_token %}
+{{ form.as_p }}
+<input type='submit'  value='Login' />
+
+	{% if form.errors %}
+	<H3> ERROR !!! There's something wrong with what you entered !!</H3>
+	{% endif %}
+
+</form>
+
+<HR>
+
+</BODY>
+
+</HTML>
